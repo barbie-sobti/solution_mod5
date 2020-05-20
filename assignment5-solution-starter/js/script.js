@@ -85,17 +85,14 @@ showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
   function (responseText){
-   document.queryselector("#main-content")
+   document.querySelector("#main-content")
    .innerHtml = responseText;
   },
   false); 
 });
  // Explicitly setting the flag to get JSON from server processed into an object literal
-});
 // *** finish **
-global.$dc = dc;
 
-(window);
 
 // Builds HTML for the home page based on categories array
 // returned from the server.
@@ -345,5 +342,7 @@ function insertItemPortionName(html,
   return html;
 }
 
+global.$dc = dc;
 
+})(window);
 
